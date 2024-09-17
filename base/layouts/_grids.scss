@@ -1,0 +1,36 @@
+/*
+ * Grid generator
+ */
+@mixin grid-layout() {
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr);
+
+    @media #{$lg} {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media #{$md} {
+        grid-template-columns: 1fr;
+    }
+}
+
+@mixin grid-item($n) {
+    grid-column: span #{$n};
+    @media #{$md} {
+        grid-column: span 1;
+    }
+}
+
+@for $n from 2 through 12 {
+
+    .grid-#{$n},
+    .grid-#{$n}>.block-editor-inner-blocks>.block-editor-block-list__layout {
+        @include grid-item($n);
+        word-break: break-word;
+    }
+}
+
+.grid,
+.admin-grid>.block-editor-inner-blocks>.block-editor-block-list__layout {
+    @include grid-layout();
+}

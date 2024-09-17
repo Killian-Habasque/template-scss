@@ -1,0 +1,33 @@
+@mixin field-style() {
+    @include button-style("primary");
+    cursor: initial;
+    padding: var(--wp--preset--spacing--sm) var(--wp--preset--spacing--md);
+    background: var(--wp--preset--color--light);
+    font-family: inherit;
+    font-size: var(--wp--preset--font-size--small);
+    font-style: normal;
+    border: 2px solid var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--primary);
+
+    &:hover {
+        border: 2px solid var(--wp--preset--color--primary-light);
+        background: var(--wp--preset--color--light);
+        color: var(--wp--preset--color--primary);
+    }
+}
+
+
+
+.fields {
+    @include field-style();
+
+    svg path {
+        stroke: var(--wp--preset--color--primary);
+    }
+
+    input {
+        color: var(--wp--preset--color--primary);
+        background: var(--wp--preset--color--light);
+        width: 100%;
+    }
+}

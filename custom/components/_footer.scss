@@ -1,0 +1,55 @@
+$footer-background-color: var(--wp--preset--color--dark);
+$footer-text-color: var(--wp--preset--color--light);
+
+$copyright-background-color: var(--wp--preset--color--dark);
+$copyright-text-color: var(--wp--preset--color--light);
+
+footer {
+    background: $footer-background-color;
+
+    .footer__group {
+        padding: var(--wp--preset--spacing--xl);
+        gap: var(--wp--preset--spacing--lg);
+        
+
+        // .logo {
+        //     place-self: center;
+        //     aspect-ratio: 1 / 1;
+        //     max-height: 250px;
+        //     padding: var(--wp--preset--spacing--md);
+
+        //     img {
+        //         object-fit: contain;
+        //         height: 100%;
+        //     }
+        // }
+        h2, h3 {
+            @include text-style("heading");
+            font-size: 25px;
+            color: $footer-text-color;
+        }
+        a, p, li {
+            font-size: 14px;
+            color: $footer-text-color;
+            word-break: break-all;
+        }
+        @media #{$md} {
+            padding: var(--wp--preset--spacing--md);
+        }
+    }
+
+    .copyright {
+        background: $copyright-background-color;
+        display: flex;
+        justify-content: center;
+        gap: var(--wp--preset--spacing--xs);
+        padding: var(--wp--preset--spacing--lg);
+
+
+        p {
+            color: $copyright-text-color;
+            font-size: 14px;
+        }
+
+    }
+}

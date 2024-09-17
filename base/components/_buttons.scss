@@ -1,0 +1,172 @@
+@mixin button-style($type) {
+    font-family: var(--wp--preset--font-family--heading);
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 600;
+    display: flex;
+    min-width: 100px;
+    white-space: nowrap;
+    padding: var(--wp--preset--spacing--sm) var(--wp--preset--spacing--lg);
+    transition: all 0.25s;
+    cursor: pointer;
+    width: fit-content;
+    outline: none;
+    border-radius: var(--wp--preset--spacing--sm);
+    height: fit-content !important;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    /* Primary */
+
+    @if $type =="primary" {
+        background: var(--wp--preset--color--primary);
+        color: var(--wp--preset--color--light);
+        border: 2px solid var(--wp--preset--color--primary);
+
+        &:hover {
+            background: var(--wp--preset--color--primary-light);
+            color: var(--wp--preset--color--light);
+            border: 2px solid var(--wp--preset--color--primary-light);
+        }
+    }
+
+
+    /* Secondary */
+
+    @else if $type =="secondary" {
+        background: var(--wp--preset--color--secondary);
+        color: var(--wp--preset--color--dark);
+        border: 2px solid var(--wp--preset--color--secondary);
+
+        &:hover {
+            background: var(--wp--preset--color--secondary-light);
+            color: var(--wp--preset--color--dark);
+            border: 2px solid var(--wp--preset--color--secondary-light);
+        }
+    }
+
+    @else if $type =="primary-stroke" {
+        background: transparent;
+        color: var(--wp--preset--color--primary);
+        border: 2px solid var(--wp--preset--color--primary);
+
+        &:hover {
+            background: var(--wp--preset--color--primary);
+            color: var(--wp--preset--color--light);
+            border: 2px solid var(--wp--preset--color--primary);
+        }
+    }
+
+    @else if $type =="secondary-stroke" {
+        background: transparent;
+        color: var(--wp--preset--color--secondary);
+        border: 2px solid var(--wp--preset--color--secondary);
+
+        &:hover {
+            background: rgba(206, 132, 20, 0.20);
+            color: var(--wp--preset--color--secondary);
+            border: 2px solid var(--wp--preset--color--secondary);
+        }
+    }
+
+    /* Dark */
+
+    @else if $type =="dark" {
+        background: var(--wp--preset--color--dark);
+        color: var(--wp--preset--color--light);
+        border: 2px solid var(--wp--preset--color--dark);
+
+        &:hover {
+            background: var(--wp--preset--color--primary);
+            color: var(--wp--preset--color--light);
+            border: 2px solid var(--wp--preset--color--dark);
+        }
+    }
+}
+
+/*
+ * Classes defintion
+ */
+.btn {
+    &__primary {
+        @include button-style("primary");
+    }
+
+    &__secondary {
+        @include button-style("secondary");
+    }
+
+    &__secondary-stroke {
+        @include button-style("secondary-stroke");
+    }
+
+    &__primary-stroke {
+        @include button-style("primary-stroke");
+    }
+
+    &__light {
+        @include button-style("light");
+    }
+
+    &__dark {
+        @include button-style("dark");
+    }
+}
+
+.is-style-primary a,
+.is-style-primary .wp-block-button__link.wp-element-button {
+    @include button-style("primary");
+}
+
+.is-style-secondary a,
+.is-style-secondary .wp-block-button__link.wp-element-button {
+    @include button-style("secondary");
+}
+
+.is-style-primary-stroke a,
+.is-style-primary-stroke .wp-block-button__link.wp-element-button {
+    @include button-style("primary-stroke");
+}
+
+.is-style-secondary-stroke a,
+.is-style-secondary-stroke .wp-block-button__link.wp-element-button {
+    @include button-style("secondary-stroke");
+}
+
+.is-style-fill a {
+    @include button-style("dark");
+}
+
+// .g__radius .wp-element-button, .g__radius .wp-block-button__link {
+//     border-radius: var(--wp--preset--spacing--md);
+// }
+
+.wp-block-buttons {
+    display: flex;
+    gap: var(--wp--preset--spacing--sm);
+    overflow: auto;
+}
+
+.wp-block-buttons.bullet {
+    align-self: start;
+    padding: var(--wp--preset--spacing--sm) 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 20px;
+
+    a.wp-element-button {
+        padding-top: 15px;
+        min-width: auto;
+        padding: var(--wp--preset--spacing--xs) var(--wp--preset--spacing--md);
+        font-size: 0.7rem;
+        min-height: 20px;
+    }
+}
+
+
+.nav-bullet {
+    padding-bottom: var(--wp--preset--spacing--md);
+
+    .wp-element-button {
+        min-height: auto !important;
+    }
+}

@@ -1,5 +1,5 @@
 @mixin button-style($type) {
-    font-family: var(--wp--preset--font-family--heading);
+    font-family: var(--font-primary);
     font-size: var(--wp--preset--font-size--small);
     font-weight: 600;
     display: flex;
@@ -23,9 +23,9 @@
         border: 2px solid var(--wp--preset--color--primary);
 
         &:hover {
-            background: var(--wp--preset--color--primary-light);
+            background: var(--color-dark);
             color: var(--wp--preset--color--light);
-            border: 2px solid var(--wp--preset--color--primary-light);
+            border: 2px solid var(--color-dark);
         }
     }
 

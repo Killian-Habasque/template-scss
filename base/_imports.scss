@@ -1,0 +1,26 @@
+//____________________________
+//
+// Base style import file
+//____________________________
+
+@import "variable";
+@import "variables";
+// @import "fonts";
+
+@import "layouts/breakpoints";
+@import "layouts/switcher";
+@import "layouts/wrapper";
+@import "layouts/grid";
+// @import "layouts/grids";
+
+@import "necessary/reset";
+@import "necessary/overall";
+@import "necessary/visually-hidden";
+
+@import "components/texts";
+@import "components/medias";
+@import "components/buttons";
+@import "components/fields";
+@import "components/containers";
+@import "components/card";
+

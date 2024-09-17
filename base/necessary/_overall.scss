@@ -3,6 +3,11 @@ html {
 }
 
 body {
+    background: var(--color-light);
+    color: var(--color-dark);
+    font-size: var(--txt-s--0);
+    font-family: var(--font-primary);
+    line-height: var(--txt-l--standard);
     overflow-x: hidden;
 }
 
@@ -11,83 +16,4 @@ main {
     overflow: hidden;
 }
 
-
-
-
-
-details {
-    padding: 20px;
-}
-
-summary {
-    list-style: none;
-    min-height: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    outline: none;
-    display: grid;
-    grid-template-columns: auto 1fr;
-}
-
-summary::-webkit-details-marker {
-    display: none
-}
-
-summary:before {
-    background: var(--wp--preset--color--dark);
-    content: "";
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none'><path d='M0.99938 1.10187L5.9994 6L11.0291 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path></svg>");
-    float: left;
-    margin: 0 20px 0 0;
-    width: 40px;
-    height: 40px;
-    background-size: 30% 30%;
-    background-repeat: no-repeat;
-    background-position: 50% 60%;
-    border-radius: 5px;
-    transform: rotate(-90deg);
-
-    @media #{$sm} {
-        margin: 0 15px 0 0;
-        width: 25px;
-        height: 25px;
-    }
-}
-
-details[open] summary {
-    padding-bottom: 20px;
-
-    &:before {
-        transform: rotate(0);
-    }
-}
-
-
-
-details>*:not(summary) {
-    padding-left: 60px;
-    @media #{$sm} {
-        padding-left: 0;
-    }
-}
-
-.wp-block-image {
-    overflow: hidden;
-
-    img {
-        width: 100%;
-    }
-}
-
-.wp-block-group {
-    scroll-margin-top: 100px;
-}
-
-
-#sb_instagram {
-    .sbi_photo_wrap {
-        border-radius: var(--wp--preset--spacing--md)!important;
-    }
-}
 

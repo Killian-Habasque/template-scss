@@ -1,0 +1,21 @@
+[class*="switcher"] {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+        flex-grow: 1;
+        flex-basis: var(--width-bassis, 250px);
+    }
+}
+
+.switcher {
+    &__sm {
+        --width-bassis: calc(var(--width--sm) / 4);
+    }
+    &__md {
+        --width-bassis: calc(var(--width--md) / 4);
+    }
+    &__lg {
+        --width-bassis: calc(var(--width--lg) / 4);
+    }
+}

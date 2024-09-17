@@ -1,0 +1,23 @@
+.card {
+    position: relative;
+
+    & figure {
+        aspect-ratio: 16/9;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    & h2>a {
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            inset: 0;
+        }
+    }
+}
+

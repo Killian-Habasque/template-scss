@@ -1,15 +1,17 @@
 @mixin text-style($category) {
 
-    @if $category =="body" {
-        font-family: var(--wp--preset--font-family--body);
-        color: var(--wp--preset--color--tertiary-light);
+    @if $category =="heading" {
+        font-family: var(--font-primary);
+        color: var(--color-dark);
         font-style: normal;
+        line-height: var(--txt-l--loose);
     }
 
-    @if $category =="heading" {
-        font-family: var(--wp--preset--font-family--heading);
-        color: var(--wp--preset--color--primary-light);
+    @if $category =="body" {
+        font-family: var(--font-secondary);
+        color: var(--color-dark);
         font-style: normal;
+        line-height: var(--txt-l--standard);
     }
 }
 
@@ -25,21 +27,4 @@
     &__heading {
         @include text-style("heading");
     }
-}
-
-
-.txt__group {
-    display: flex;
-    gap: .5rem;
-    padding: .5rem;
-    word-break: break-word;
-    flex-direction: column;
-    height: 100%;
-    z-index: 1;
-}
-
-.txt__variant {
-    font-family: var(--wp--preset--font-family--heading);
-    font-weight: 700;
-    font-style: italic;
 }

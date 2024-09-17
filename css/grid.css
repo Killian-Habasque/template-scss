@@ -1,0 +1,1 @@
+.grid{display:grid;gap:var(--space--sm)}.grid-auto{grid-template-columns:repeat auto-fit,minmax(200px, 1fr)}/*# sourceMappingURL=grid.css.map */

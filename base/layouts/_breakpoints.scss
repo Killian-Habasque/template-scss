@@ -1,11 +1,9 @@
-$sm-w: 450px;
-$md-w: 768px;
-$lg-w: 980px;
-$xl-w: 1200px;
-$xxl-w: 1400px;
+$sm-w: var(--break-w--sm);
+$md-w: var(--break-w--md);
+$lg-w: var(--break-w--lg);
+$xl-w: var(--break-w--xl);
 
 $sm: 'all and (max-width: #{$sm-w})';
 $md: 'all and (max-width: #{$md-w})';
 $lg: 'all and (max-width: #{$lg-w})';
 $xl: 'all and (max-width: #{$xl-w})';
-$xxl: 'all and (max-width: #{$xxl-w})';

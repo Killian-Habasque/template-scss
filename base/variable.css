@@ -1,0 +1,74 @@
+:root {
+    /*
+    * Colors
+    */
+    --color-light: white;
+    --color-dark: black;
+
+    --color-primary: #1E4E4E;
+    --color-primary--light: #d4e2d6;
+
+    --color-secondary: #AB4E17;
+    --color-secondary--light: #CE8414;
+
+    /*
+    * Global properties
+    */
+    --transition: 0.25s;
+    --radius: 1.5rem;
+ 
+
+    /*
+    * Breakpoints
+    */
+    --break-w--xs: 15.625rem;
+    --break-w--sm: 28.125rem;
+    --break-w--md: 48rem;
+    --break-w--lg: 80rem;
+    --break-w--xl: 87.5rem;
+ 
+    /*
+    * Widths
+    */
+    --width--sm: 62.5rem;
+    --width--md: 75rem;
+    --width--lg: 87.5rem;
+
+    /*
+    * Spacers
+    */
+    --space--3xs: clamp(0.3125rem, 0.2888rem + 0.1149vw, 0.375rem);
+    --space--2xs: clamp(0.5625rem, 0.4914rem + 0.3448vw, 0.75rem);
+    --space--xs: clamp(0.875rem, 0.7802rem + 0.4598vw, 1.125rem);
+    --space--sm: clamp(1.125rem, 0.9828rem + 0.6897vw, 1.5rem);
+    --space--md: clamp(1.6875rem, 1.4741rem + 1.0345vw, 2.25rem);
+    --space--lg: clamp(2.25rem, 1.9655rem + 1.3793vw, 3rem);
+    --space--xl: clamp(3.375rem, 2.9483rem + 2.069vw, 4.5rem);
+    --space--2xl: clamp(4.5rem, 3.931rem + 2.7586vw, 6rem);
+    --space--3xl: clamp(6.75rem, 5.8966rem + 4.1379vw, 9rem);
+    --space--4xl: clamp(9rem, 7.8621rem + 5.5172vw, 12rem);
+
+    /*
+    * Fonts
+    */
+    --font-primary: "Arial";
+    --font-secondary: "Times New Roman";
+
+    --txt-w--regular: 400;
+    --txt-w--medium: 500;
+    --txt-w--blod: 700;
+    
+    --txt-s--0: clamp(1.125rem, 0.9828rem + 0.6897vw, 1.5rem);
+    --txt-s--1: clamp(1.3219rem, 1.1121rem + 1.0172vw, 1.875rem);
+    --txt-s--2: clamp(1.5532rem, 1.2533rem + 1.4539vw, 2.3438rem);
+    --txt-s--3: clamp(1.825rem, 1.406rem + 2.0316vw, 2.9297rem);
+    --txt-s--4: clamp(2.1444rem, 1.5687rem + 2.7912vw, 3.6621rem);
+    --txt-s--5: clamp(2.5197rem, 1.739rem + 3.7848vw, 4.5776rem);
+    --txt-s--6: clamp(2.9606rem, 1.9132rem + 5.0785vw, 5.722rem);
+    --txt-s--7: clamp(3.4787rem, 2.0852rem + 6.7565vw, 7.1526rem);
+
+    --txt-l--flat: 1;
+    --txt-l--fine: 1.15;
+    --txt-l--standard: 1.5;
+    --txt-l--loose: 1.7;
+}  

@@ -1,0 +1,19 @@
+[class*="grid"] {
+    display: grid;
+    grid-template-columns:
+        repeat(var(--grid-placement, auto-fill),
+            minmax(var(--grid-min-item-size, 16rem), 1fr));
+    gap: var(--space--sm);
+}
+
+@for $n from 1 through 12 {
+    .grid-items--#{$n} {
+        --grid-placement: #{$n};
+    }
+}
+
+[class*="grid-items"] {
+    @media #{$sm} {
+        --grid-placement: 1;
+    }
+}

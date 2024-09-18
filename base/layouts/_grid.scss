@@ -17,15 +17,15 @@
 
         @if $n >1 {
             @if $n >2 {
-                @media #{$lg} {
-                    --grid-placement: #{floor($n / 1.5)};
+                @if $n >3 {
+                    @media #{$lg} {
+                        --grid-placement: #{floor($n / 1.5)};
+                    }
                 }
-
                 @media #{$md} {
                     --grid-placement: #{floor($n / 2)};
                 }
             }
-
             @media #{$sm} {
                 --grid-placement: 1;
             }

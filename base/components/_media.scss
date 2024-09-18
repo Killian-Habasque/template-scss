@@ -1,0 +1,15 @@
+@mixin media-style($type) {
+    overflow: hidden;
+    border-radius: var(--space--md);
+
+    img {
+        width: 100%;
+        height: 100%;
+        @if $type =="cover" {
+            object-fit: cover;
+        }
+        @if $type =="contain" {
+            object-fit: contain;
+        }   
+    }
+}

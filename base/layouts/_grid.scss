@@ -4,16 +4,31 @@
         repeat(var(--grid-placement, auto-fill),
             minmax(var(--grid-min-item-size, 16rem), 1fr));
     gap: var(--space--sm);
-}
 
-@for $n from 1 through 12 {
-    .grid-items--#{$n} {
-        --grid-placement: #{$n};
+    @media #{$sm} {
+        --grid-min-item-size: auto;
     }
 }
 
-[class*="grid-items"] {
-    @media #{$sm} {
-        --grid-placement: 1;
+@for $n from 1 through 5 {
+    .grid-template--#{$n} {
+        --grid-placement: #{$n};
+        --grid-min-item-size: 0;
+
+        @if $n >1 {
+            @if $n >2 {
+                @media #{$lg} {
+                    --grid-placement: #{floor($n / 1.5)};
+                }
+
+                @media #{$md} {
+                    --grid-placement: #{floor($n / 2)};
+                }
+            }
+
+            @media #{$sm} {
+                --grid-placement: 1;
+            }
+        }
     }
 }

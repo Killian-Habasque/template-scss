@@ -1,21 +1,28 @@
 [class*="switcher"] {
     display: flex;
     flex-wrap: wrap;
-
-    > * {
+    gap: var(--space--xs, 0);
+    
+    >* {
         flex-grow: 1;
         flex-basis: var(--width-bassis, 250px);
     }
 }
 
+.switcher> :nth-child(n + 3) {
+    flex-basis: 100%;
+}
+
 .switcher {
-    &__sm {
+    &--sm {
         --width-bassis: calc(var(--width--sm) / 4);
     }
-    &__md {
+
+    &--md {
         --width-bassis: calc(var(--width--md) / 4);
     }
-    &__lg {
+
+    &--lg {
         --width-bassis: calc(var(--width--lg) / 4);
     }
 }

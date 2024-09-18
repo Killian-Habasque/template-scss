@@ -8,37 +8,124 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <div class="wrapper__sm">
-        <div class="grid-items--2">
-            <article class="card switcher__md">
-                <figure>
-                    <img src="./default.png" alt="">
-                </figure>
-                <div class="card__inner">
-                    <h2><a href="#">Titre card</a></h2>
-                    <p>Lorem ipsum</p>
-                </div>
-            </article>
-            <article class="card switcher__sm">
-                <figure>
-                    <img src="./default.png" alt="">
-                </figure>
-                <div class="card__inner">
-                    <h2><a href="#">Titre card</a></h2>
-                    <p>Lorem ipsum</p>
-                </div>
-            </article>
-            <article class="card switcher__sm">
-                <figure>
-                    <img src="./default.png" alt="">
-                </figure>
-                <div class="card__inner">
-                    <h2><a href="#">Titre card</a></h2>
-                    <p>Lorem ipsum</p>
-                </div>
-            </article>
+<body class="flow--lg">
+    <div class="wrapper--lg flow--lg">
+        <h1>CSS components</h1>
+        <div class="wrapper">
+            <h2 class="color--primary">Titles</h2>
+            <div>
+                <h1>h1 - Logoden biniou degemer mat</h1>
+                <h2>h2 - Logoden biniou degemer mat</h2>
+                <h3>h3 - Logoden biniou degemer mat</h3>
+                <h4>h4 - Logoden biniou degemer mat</h4>
+                <p>p - Logoden biniou degemer mat an penn ar bed strad, toenn heuliañ karantez Europa daouzek dindan hol
+                    pevar bed, pesketa seul diouzh forzh liv trugarez arrebeuri.</p>
+            </div>
         </div>
+
+        <div class="wrapper">
+            <h2 class="color--primary">Buttons</h2>
+            <div class="cluster">
+                <button class="btn--primary">Primary</button>
+                <button class="btn--primary_stroke">Primary stroke</button>
+                <button class="btn--secondary">Secondary</button>
+                <button class="btn--secondary_stroke">Secondary stroke</button>
+                <button class="btn--light">Light</button>
+                <button class="btn--dark">Dark</button>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h2 class="color--primary">Fields</h2>
+            <input type="text" class="field" />
+            <button class="btn--primary">Envoyer</button>
+        </div>
+
+        <div class="wrapper">
+            <h2 class="color--primary">Cards</h2>
+            <div class="grid-template--2">
+                <article class="card flow">
+                    <figure>
+                        <img src="./default.png" alt="">
+                    </figure>
+                    <div>
+                        <h2><a href="#">Card flow</a></h2>
+                        <p>Logoden biniou degemer mat an penn ar bed strad, toenn heuliañ karantez Europa daouzek
+                            dindan.</p>
+                    </div>
+                </article>
+                <article class="card switcher--sm">
+                    <figure>
+                        <img src="./default.png" alt="">
+                    </figure>
+                    <div>
+                        <h2><a href="#">Card switcher</a></h2>
+                        <p>Logoden biniou degemer mat an penn ar bed strad, toenn heuliañ karantez Europa daouzek
+                            dindan.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="wrapper">
+            <h2 class="color--primary">Grids</h2>
+            <div class="flow-sm">
+                <div>
+                    <h3 class="color--secondary">Grid auto</h3>
+                    <div class="grid">
+                        <article class="card bcolor--primary">
+                            <h4 class="color--light"><a href="#">Item 1</a></h4>
+                        </article>
+                        <article class="card">
+                            <h4><a href="#">Item 2</a></h4>
+                        </article>
+                        <article class="card bcolor--primary">
+                            <h4 class="color--light"><a href="#">Item 3</a></h4>
+                        </article>
+                        <article class="card">
+                            <h4><a href="#">Item 4</a></h4>
+                        </article>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="color--secondary">Grid template (5 items)</h3>
+                    <div class="grid-template--5">
+                        <article class="card bcolor--primary">
+                            <h4 class="color--light"><a href="#">Item 1</a></h4>
+                        </article>
+                        <article class="card">
+                            <h4><a href="#">Item 2</a></h4>
+                        </article>
+                        <article class="card bcolor--primary">
+                            <h4 class="color--light"><a href="#">Item 3</a></h4>
+                        </article>
+                        <article class="card">
+                            <h4><a href="#">Item 4</a></h4>
+                        </article>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="color--secondary">Grid template (2 items)</h3>
+                    <div class="grid-template--2">
+                        <article class="card bcolor--primary">
+                            <h4 class="color--light"><a href="#">Item 1</a></h4>
+                        </article>
+                        <article class="card">
+                            <h4><a href="#">Item 2</a></h4>
+                        </article>
+                        <article class="card bcolor--primary">
+                            <h4 class="color--light"><a href="#">Item 3</a></h4>
+                        </article>
+                        <article class="card">
+                            <h4><a href="#">Item 4</a></h4>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="txt--center bcolor--dark">
+        <a class="color--light" href="https://github.com/Killian-Habasque/template-scss.git" target="_blank">Killian Habasque github</a>
     </div>
 </body>
 

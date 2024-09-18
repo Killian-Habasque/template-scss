@@ -4,16 +4,40 @@
     max-width: clamp(16rem, var(--wrapper-max-width, 100vw), 80rem);
     padding-left: var(--space--sm);
     padding-right: var(--space--sm);
+    scroll-margin-top: 2rem;
 }
 
 .wrapper {
-    &__sm {
+    &--sm {
         --wrapper-max-width: var(--width--sm);
     }
-    &__md {
+    &--md {
         --wrapper-max-width: var(--width--md);
     }
-    &__lg {
+    &--lg {
         --wrapper-max-width: var(--width--lg);
     }
+}
+
+.bcolor--primary {
+    background: var(--color--primary);
+}
+.bcolor--primary_light {
+    background: var(--color--dark);
+}
+.bcolor--secondary {
+    background: var(--color--secondary);
+}
+.bcolor--secondary_light {
+    background: var(--color--secondary-light);
+}
+.bcolor--dark {
+    background: var(--color--dark);
+}
+.bcolor--light {
+    background: var(--color--light);
+}
+
+.b-radius {
+    border-radius: var(--radius, 0);
 }

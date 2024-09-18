@@ -1,0 +1,17 @@
+@mixin field-style() {
+    --font-size: var(--txt-s--0);
+
+    @include text-style("body");
+    padding: var(--space--2xs, 0) var(--space--xs, 0);
+    transition: all var(--transition, 0.25s);
+    border-radius: var(--space--2xs, 0);
+    background: var(--color--light);
+    border: 2px solid var(--color--primary);
+    color: var(--color--primary);
+    max-width: clamp(5rem,var(--field-max-width, 100%),20rem);
+    width: 100%;
+}
+
+.field {
+    @include field-style();
+}

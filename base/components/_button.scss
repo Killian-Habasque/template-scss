@@ -1,0 +1,116 @@
+@mixin button-style($type) {
+    --font-size: var(--txt-s--0);
+
+    @include text-style("body");
+    padding: var(--space--2xs, 0) var(--space--xs, 0);
+    transition: all var(--transition, 0.25s);
+    border-radius: var(--radius, 0);
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+
+    /* Primary */
+    @if $type =="primary" {
+        background: var(--color--primary);
+        color: var(--color--light);
+        border: 2px solid var(--color--primary);
+
+        &:hover {
+            background: var(--color--primary-light);
+            color: var(--color--light);
+            border: 2px solid var(--color--primary-light);
+        }
+    }
+
+    @else if $type =="primary-stroke" {
+        background: transparent;
+        color: var(--color--primary);
+        border: 2px solid var(--color--primary);
+
+        &:hover {
+            background: var(--color--primary-light);
+            color: var(--color--light);
+            border: 2px solid var(--color--primary-light);
+        }
+    }
+
+    /* Secondary */
+    @else if $type =="secondary" {
+        background: var(--color--secondary);
+        color: var(--color--dark);
+        border: 2px solid var(--color--secondary);
+
+        &:hover {
+            background: var(--color--secondary-light);
+            color: var(--color--dark);
+            border: 2px solid var(--color--secondary-light);
+        }
+    }
+
+    @else if $type =="secondary-stroke" {
+        background: transparent;
+        color: var(--color--dark);
+        border: 2px solid var(--color--secondary);
+
+        &:hover {
+            background: var(--color--secondary-light);
+            color: var(--color--dark);
+            border: 2px solid var(--color--secondary-light);
+        }
+    }
+
+    /* Light */
+    @else if $type =="light" {
+        background: var(--color--light);
+        color: var(--color--dark);
+        border: 2px solid var(--color--light);
+
+        &:hover {
+            background: var(--color--dark);
+            color: var(--color--light);
+            border: 2px solid var(--color--dark);
+        }
+    }
+
+    /* Dark */
+    @else if $type =="dark" {
+        background: var(--color--dark);
+        color: var(--color--light);
+        border: 2px solid var(--color--dark);
+
+        &:hover {
+            background: var(--color--light);
+            color: var(--color--dark);
+            border: 2px solid var(--color--light);
+        }
+    }
+}
+
+/*
+ * Classes defintion
+ */
+.btn {
+    &--primary {
+        @include button-style("primary");
+    }
+
+    &--primary_stroke {
+        @include button-style("primary-stroke");
+    }
+
+    &--secondary {
+        @include button-style("secondary");
+    }
+
+    &--secondary_stroke {
+        @include button-style("secondary-stroke");
+    }
+
+    &--light {
+        @include button-style("light");
+    }
+
+    &--dark {
+        @include button-style("dark");
+    }
+}

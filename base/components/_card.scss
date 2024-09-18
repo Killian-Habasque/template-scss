@@ -1,17 +1,15 @@
 .card {
     position: relative;
+    padding: var(--space--xs, 0);
+    border-radius: var(--radius, 0);
+    border: 2px solid var(--color--primary-light);
 
     & figure {
         aspect-ratio: 16/9;
-        overflow: hidden;
-
-        img {
-            object-fit: cover;
-            object-position: center;
-        }
+        @include media-style(cover);
     }
 
-    & h2>a {
+    & h2>a, & h3>a, & h4>a {
         &:before {
             content: '';
             display: block;
@@ -20,4 +18,3 @@
         }
     }
 }
-

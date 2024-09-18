@@ -1,0 +1,79 @@
+@mixin text-style($type) {
+    @if $type =="heading" {
+        font-family: var(--font-primary);
+        color: var(--color--dark);
+        font-style: normal;
+        line-height: var(--txt-l--loose);
+        font-size: var(--font-size, 2rem);
+    }
+    @if $type =="body" {
+        font-family: var(--font-secondary);
+        color: var(--color--dark);
+        font-style: normal;
+        line-height: var(--txt-l--standard);
+        font-size: var(--font-size, 1rem);
+    }
+}
+
+
+ /*
+ * Classes defintion
+ */
+.txt {
+    &--heading {
+        @include text-style("heading");
+    }
+    &--body {
+        @include text-style("body");
+    }
+}
+
+h1 {
+    --font-size: var(--txt-s--4);
+    @include text-style("heading");
+}
+h2 {
+    --font-size: var(--txt-s--3);
+    @include text-style("heading");
+}
+h3 {
+    --font-size: var(--txt-s--2);
+    @include text-style("heading");
+}
+h4 {
+    --font-size: var(--txt-s--1);
+    @include text-style("heading");
+}
+p {
+    --font-size: var(--txt-s--0);
+    @include text-style("body");
+}
+
+.color--primary {
+    color: var(--color--primary);
+}
+.color--primary_light {
+    color: var(--color--dark);
+}
+.color--secondary {
+    color: var(--color--secondary);
+}
+.color--secondary_light {
+    color: var(--color--secondary-light);
+}
+.color--dark {
+    color: var(--color--dark);
+}
+.color--light {
+    color: var(--color--light);
+}
+
+.txt--left {
+    text-align: left;
+}
+.txt--center {
+    text-align: center;
+}
+.txt--right {
+    text-align: right;
+}

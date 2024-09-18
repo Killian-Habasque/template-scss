@@ -1,0 +1,17 @@
+[class*="flow"] >*+* {
+    margin-top: var(--flow-space, 1em);
+}
+
+.flow {
+    &--sm {
+        --flow-space: var(--space--sm);
+    }
+
+    &--md {
+        --flow-space: var(--space--md);
+    }
+
+    &--lg {
+        --flow-space: var(--space--lg);
+    }
+}

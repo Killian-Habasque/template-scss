@@ -1,6 +1,6 @@
 @mixin media-style($type) {
     overflow: hidden;
-    border-radius: var(--space--md);
+    border-radius: var(--radius);
 
     img {
         width: 100%;
